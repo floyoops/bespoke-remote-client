@@ -33,13 +33,17 @@ var floRemote = function($, socket, floPoke) {
 
       socket.emit('setTokenBp', token);
 
-      socket.on('client-bespoke-action', function(action) {
+      socket.on('client-bespoke-action', function(res) {
+          console.log(res);
+          var action = res.action;
+          var username = res.username;
+
           if (action == 'prev') {
               deck.prev();
           } else if (action == 'next') {
               deck.next();
           } else if (action == 'flopoke-finger1-start') {
-              floPoke.finger1().start();
+              floPoke.finger1().start(username);
           }
       });
 

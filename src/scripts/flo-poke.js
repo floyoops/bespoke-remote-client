@@ -4,12 +4,16 @@ var floPoke = function($) {
         finger1: function () {
             var that = this;
             return {
+                username: null,
                 animation: function() {
                     $poke = $('.poke').eq(0);
                     $poke.addClass('finger1_wrap');
+                    $poke.append('<div class="finger1_username">' + this.username + '</div>');
                     $poke.append('<img src="images/finger1.png" class="finger1" />');
+
                 },
-                start: function() {
+                start: function(username) {
+                    this.username = username;
                     that.start(5000);
                     this.animation();
                 },
