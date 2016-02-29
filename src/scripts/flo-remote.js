@@ -34,7 +34,6 @@ var floRemote = function($, socket, floPoke) {
       socket.emit('setTokenBp', token);
 
       socket.on('client-bespoke-action', function(res) {
-          console.log(res);
           var action = res.action;
           var username = res.username;
 
