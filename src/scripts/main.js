@@ -9,7 +9,7 @@ var bespoke = require('bespoke'),
   progress = require('bespoke-progress');
   bullets = require('bespoke-bullets');
   $ = require('jquery');
-  socket = require('socket.io-client')('http://localhost:8000');
+  socket = require('socket.io-client')('http://lespandas.fr:8000');
   floRmote = require('./flo-remote.js');
   floPoke = require('./flo-poke.js')($);
 
